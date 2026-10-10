@@ -1,0 +1,40 @@
+:root {
+  --bg: #070b12;
+  --panel: #101826;
+  --line: #243044;
+  --text: #e8eef8;
+  --muted: #8b9bb4;
+  --allow: #3dd68c;
+  --sanitize: #f5c542;
+  --block: #ff5d73;
+  --accent: #6ea8fe;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, sans-serif; }
+button, textarea, select, input { font: inherit; }
+button { cursor: pointer; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.03em; }
+.sub { color: var(--muted); margin-bottom: 24px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+label { display: block; font-size: 12px; color: var(--muted); margin: 8px 0 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+textarea, select { width: 100%; background: #0b1220; color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 10px; }
+textarea { min-height: 120px; resize: vertical; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.btn { border: 0; border-radius: 8px; padding: 10px 14px; background: var(--accent); color: #071018; font-weight: 700; }
+.btn.ghost { background: #1b2536; color: var(--text); }
+.btn.danger { background: var(--block); color: #16040a; }
+.libs { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+.chip { background: #1b2536; border: 1px solid var(--line); color: var(--text); border-radius: 999px; padding: 6px 10px; font-size: 12px; }
+.score { font-size: 42px; font-weight: 800; }
+.action { font-size: 22px; font-weight: 800; margin: 8px 0; }
+.ALLOW { color: var(--allow); }
+.SANITIZE { color: var(--sanitize); }
+.BLOCK { color: var(--block); }
+.ev { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; background: #0b1220; padding: 8px; border-radius: 8px; margin: 6px 0; white-space: pre-wrap; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.metric { background: #0b1220; padding: 10px; border-radius: 8px; }
+.metric b { display: block; font-size: 20px; }
+@media (max-width: 800px) { .grid, .metrics { grid-template-columns: 1fr; } }
